@@ -1,0 +1,59 @@
+NPM : package manager for node. It does not stand for node package manager. People generally say it as node package manager.
+
+Parcel and webpack are bundlers which performs various tasks like bundling, code minification, hot module replacement, etc. 
+
+parcel cache is a folder created by parcel when it firstly builds a dev env. It then uses it to cache files and parcel uses a file watching algorithm
+to serve files and builds cache using the files stored in parcel-cache
+
+npx is an executable command from which we can execute installed node package.
+
+dependencies are files and libraries required for the app to work properly.
+devDependencies are files and libraries which are required to do the development work more efficiently.
+
+Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code. 
+When parcel does bundling it implements tree shaking and remove the dead code from our app and minify and optimise the code.
+
+HMR is a concept in which not the whole code is compiled and loaded. Only the part which is changed is loaded after compilation.
+Hot Module Replacement is a feature that enables you to see code changes in the browser without having to refresh it, 
+allowing you to preserve the state of your front-end application. But implementing HMR can be tricky because it can incur side effects.
+
+5+ super powers of parcel are
+Bundling
+Hot Module Replacement
+Tree shaking
+Code splitting
+File watchers 
+creating a local dev server
+caching - faster builds
+Image Optimization
+minification
+Compressing 
+Diagonastics 
+Error handling
+HTTPs based server
+
+Differencial bundling (to Study)
+Consistent Hashing  (to study)
+
+
+.gitignore is a file which contains directories and files which we dont want to push to remote vcs tool.
+files and directories which can be created via pre-existing code should not be pushed to git. 
+directories like .parcel-cache and node_modules are examples of it.
+
+package.json is a file which contains all the important information about the project.
+It also contains dependencies and devDependencies which are required by our project.
+
+package-lock.json is a file which contains exact version, sha hash of all the library which we are using in our project. 
+It locks the project deps and devDeps so project uses same files in the prod build.
+
+package-lock.json should not be modified as there might be undesirable changes in the project since our project depends on the deps which are mentioned in
+the package.json and package-lock.json contains the exact version with its sha hash so if they dont match the application may crash.
+
+Node_modules is a folder which contains libraries on which our project utilises to run the app smoothly. We should not push node_modules to remote as
+it can be regenerated from package.json and package-lock.json
+
+browserList is a list of browsers which we mention in the package.json file 
+so our bundler creates some files which make our app compatible with the browsers mentioned in the list.
+
+dist folder contains the code which is a prod build of our app.
+
