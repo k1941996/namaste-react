@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 2</title>
     <link rel="stylesheet" href="index.css" />
+    <!-- React,React-dom and babel are required to run without parcel -->
+    <!-- 
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
@@ -14,12 +16,14 @@
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       crossorigin
     ></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+  -->
   </head>
   <body>
     <noscript>Javascript is required to run this application</noscript>
     <div id="root"></div>
-    <script type="text/babel" data-presets="env,react"  src="App.jsx">
+    <script type="module" src="App.jsx"></script>
+    <!-- <script type="text/babel" data-presets="env,react"  src="App.jsx"> -->
     </script>
   </body>
 </html>
